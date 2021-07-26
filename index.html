@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+ <html lang="en" dir="ltr">
+
+ <head>
+   <meta charset="utf-8">
+   <title>Aot Mini Game</title>
+   <link rel="stylesheet" href="index.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+ <script src="https://kit.fontawesome.com/fc86cceaee.js" crossorigin="anonymous"></script>
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap" rel="stylesheet">
+ </head>
+
+ <body>
+   <h2 id="test" class="h2-main">Aot Mini Game</h2>
+<img id="beast" class=" beast" src="images/calm-beast.png" alt="">
+
+<div  class="group">
+  <img id="e-pic" class="erwin group1" src="images/erwin.png" alt="">
+<!--  <i class="fas arrow fa-5x fa-arrow-right" style="color:#38AEE6"></i> -->
+
+</div>
+
+<div class="group">
+  <img id="f-pic" class="flock  group1" src="images/flock.png" alt="">
+  <!--<i class="fas arrow1 fa-5x fa-arrow-right" style="color:#38AEE6"></i>
+  <i class="fas arrow3 fa-5x fa-arrow-right" style="color:#38AEE6"></i> -->
+
+</div>
+
+<div class=""group>
+  <img id="m-pic" class="group marlow" src="images/marlow.png" alt="">
+<!-- <i class="fas arrow2 fa-5x fa-arrow-right" style="color:#38AEE6"></i> -->
+</div>
+
+<div id="click" class="">
+<h2 id="win" class="win">The scouts have won!!! </h2>
+  <button type="input"  id="erwin-js" class="click B-erwin btn-primary btn-lg" onclick="b(); esound()">PUSH</button>
+  <button type="input"  id="flock-js" class="click f-erwin btn-primary btn-lg" onclick="d(); fsound()">PUSH</button>
+  <button type="input"  id="marlow-js" class="click m-erwin btn-primary btn-lg" onclick="e(); msound() ">PUSH</button>
+  <button type="button" class="try-again btn-danger btn-lg "id="refresh" onclick="c()"> Try again</button>
+  <button  id="playsound"type="button" name="button "  class="btn-primary btn-lg" onclick="play(); sound()"> play</button>
+  <button  class="finalpush btn-primary btn-lg" id="final" onclick="z()">FINAL PUSH </button>
+
+
+
+</div>
+
+
+
+<div class="footer">
+   <h4 class="h4-text" >Balans&copy;</h4`>
+</div>
+
+
+
+ </body>
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ <script src="index.js" charset="utf-8"></script>
+
+ </html>
