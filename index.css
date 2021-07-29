@@ -1,0 +1,134 @@
+body{
+  background-image: url("images/bg-pic.png");
+position: relative;
+height: 100%;
+width: 100%;
+}
+body::after {
+  content: '';
+  display: block;
+  height: 50px; /* Set same as footer's height */
+}
+
+.h4-text{
+  margin-top: -15px;
+}
+
+.h2-main{
+  text-align: center;
+  margin-top: 50px;
+  font-size: 100px;
+  margin-bottom: 200px;
+  font-family: 'Reggae One', cursive;
+  text-shadow: 2px 2px #d4b400b3;
+    margin-left: 60px;
+}
+
+
+.beast-div{
+  margin-left: 500px;
+}
+
+.beast{
+  width: 50%;
+  float: right;
+  margin-top: -100px;
+
+
+}
+
+.erwin{
+  position: absolute;
+  top: 350px;
+  margin-left: 70px;
+
+
+}
+
+.flock{
+      margin-left: 75px;
+      position: absolute;
+      top: 180px;
+}
+
+.marlow{
+  width: 15%;
+  margin-left: 75px;
+  position: absolute;
+  margin-top: 200px;
+}
+
+.group{
+  margin-bottom: 50px;
+
+}
+
+.group1{
+  width: 15%;
+}
+
+
+#click{
+  text-align: center;
+
+}
+
+.m-erwin{
+  margin-left: 600px!important;
+    margin-right: 10px;
+    position: absolute;
+    top: 700px;
+}
+.f-erwin{
+  margin-left: 600px !important;
+    margin-right: 10px;
+    position: absolute;
+    top: 700px;
+}
+.B-erwin{
+  margin-left: 600px!important;
+}
+
+
+.finalpush{
+  margin-left: 600px !important;
+    margin-right: 10px;
+    position: absolute;
+    top: 720px;
+}
+
+.click{
+  margin-left: -100px;
+    margin-right: 10px;
+    position: absolute;
+    top: 720px;
+}
+
+.try-again{
+  position: absolute;
+    top: 720px;
+    margin-left: 300px;
+}
+
+.win{
+  font-size: 80px;
+    margin-top: 250px;
+    position: absolute;
+    margin-left: 500px;
+    font-family: 'Reggae One', cursive;
+    text-shadow: 2px 2px #d4b400b3;
+}
+
+#playsound{
+  margin-left: -180px;
+    margin-right: 10px;
+    position: absolute;
+    top: 720px;
+}
+.footer{
+  bottom: 0;
+width: 100%;
+height: 50px;
+position: fixed;
+  border: 25px solid #bae8cbd4;
+}
