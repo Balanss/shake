@@ -1,27 +1,43 @@
 var reload = document.querySelector("refresh");
-var img1 = document.getElementById("f-pic");
+
 var img2 = document.getElementById("m-pic");
 var img = document.getElementById("e-pic");
- var all = ["erwin","flock","marlow" ];
+var flo1 = document.getElementById("f-pic");
 
-console.log(all);
+document.getElementById("erwin-js").style.display = "none";
+document.getElementById("flock-js").style.display = "none"
+document.getElementById("marlow-js").style.display = "none";
 
-var erwin = document.getElementById("erwin-js").style.display="none";
-var flock =  document.getElementById("flock-js").style.display = "none";
-var marlow = document.getElementById("marlow-js").style.display="none";
-var final =   document.getElementById("final").style.display = "none";
 
- document.getElementById("win").style.display="none";
+var final = document.getElementById("final").style.display = "none";
+
+
+
+
+
+
+var erwin = 7 - Math.floor(Math.random() * 7);
+var flock = 7 - Math.floor(Math.random() * 7);
+var flock2 = flock;
+var marlow = 7 - Math.floor(Math.random() * 7);
+
+
+
+document.getElementById("test").style.display = "block";
 
 function b() {
-var soldier = new Audio ("sound/soldier.mp3");
-  var a = Math.floor(Math.random() * 7);
-  var erwinyell = new Audio("sound/erwin1.mp3");
-  if (a <= 3) {
+  var a = 4;
+var volley = new Audio("sound/volley.mp3");
+  var img = document.getElementById("e-pic");
 
-    img.style.left = `${img.offsetLeft + 600}px`;
+  var erwinyell = new Audio("sound/erwin1.mp3");
+  if (erwin < a) {
+
+volley.play();
+    document.getElementById("e-pic").style.display = "block";
+    img.style.left = `${img.offsetLeft + 400}px`;
     document.getElementById("erwin-js").style.display = "none";
-    soldier.play();
+
 
   } else {
     document.getElementById("erwin-js").style.display = "none";
@@ -34,48 +50,53 @@ var soldier = new Audio ("sound/soldier.mp3");
 
 };
 
-function esound(){
-  setTimeout(function(){
 
-document.getElementById("flock-js").style.display = "block";
-},2000);
+
+
+function esound() {
+  setTimeout(function() {
+
+    document.getElementById("flock-js").style.display = "block";
+  }, 2000);
 };
 
 
-function fsound(){
-  setTimeout(function(){
+function fsound() {
+  setTimeout(function() {
 
-document.getElementById("marlow-js").style.display = "block";
-},2000);
+    document.getElementById("marlow-js").style.display = "block";
+  }, 2000);
+};
+
+
+function msound() {
+
+  setTimeout(function() {
+
+    document.getElementById("final").style.display = "block";
+  }, 3000);
+
 };
 
 
 
-function msound(){
-
-  setTimeout(function(){
-
-document.getElementById("final").style.display = "block";
-},3000);
-
-};
 
 
 
-
-
-
+var fire = new Audio("sound/fire.mp3");
 function d() {
 
+  var a1 = 4
 
-  var scream = new Audio("sound/scream.mp3");
   var fcry = new Audio("sound/flock1.mp3");
-  var a1 = Math.floor(Math.random() * 7);
-  if (a1 <= 3) {
-    img1.style.left = `${img.offsetLeft + 1}px`;
+
+  if (flock2 < a1) {
+
+    flo1.style.left = `${flo1.offsetLeft + 399}px`;
     document.getElementById("flock-js").style.display = "none";
     //document.getElementById("marlow-js").style.display = "block";
-    scream.play();
+    document.getElementById("f-pic").style.display = "block";
+    fire.play();
 
   } else {
     document.getElementById("f-pic").style.display = "none";
@@ -83,61 +104,67 @@ function d() {
     document.getElementById("flock-js").style.display = "none";
     fcry.play();
   }
-console.log(a1);
+  console.log(a1);
+
 };
 
-function e(){
-  var rage = new Audio("sound/rage.mp3");
+
+
+
+function e() {
+
   var mcry = new Audio("sound/marlow1.mp3");
-var a2 = Math.floor(Math.random() * 7);
-img2.style.left = `${img.offsetLeft + 1}px`;
-if(a2 <= 3){
-document.getElementById("marlow-js").style.display = "none";
-// document.getElementById("final").style.display = "block";
-rage.play();
+  var a2 = 4
 
-}
+  if (marlow < a2) {
+fire.play();
+    document.getElementById("marlow-js").style.display = "none";
+    document.getElementById("final").style.display = "block";
+    img2.style.left = `${img2.offsetLeft + 399}px`;
 
+  } else {
 
-else{
-//document.getElementById("final").style.display = "block";
-document.getElementById("marlow-js").style.display = "none";
-document.getElementById("m-pic").style.display = "none";
-mcry.play();
-}
-
+    document.getElementById("final").style.display = "none";
+    document.getElementById("marlow-js").style.display = "none";
+    document.getElementById("m-pic").style.display = "none";
+    mcry.play();
+  }
+  console.log(a2);
 };
 
 
 
-function z(){
-  var scoutsWin= new Audio("sound/scouts-win.mp3")
-var lose = new Audio("sound/gameover.mp3");
-var a3 = Math.floor(Math.random() * 7);
-count = count + 1;
-var count = 0;
-if (a3 <= 3){
-  img2.style.left = `${img.offsetLeft + 650}px`;
-  img1.style.left = `${img.offsetLeft + 650}px`;
-  img.style.left = `${img.offsetLeft + 650}px`;
-  document.getElementById("final").style.display = "none";
-  document.getElementById("beast").src="images/win.png";
-  document.getElementById("win").style.display="block";
-  scoutsWin.play();
 
-} else {
-  document.getElementById("final").style.display = "none";
-  document.getElementById("beast").src="images/titan.png";
-  document.getElementById("f-pic").style.display = "none";
-  document.getElementById("m-pic").style.display = "none";
-  document.getElementById("e-pic").style.display = "none";
-  document.getElementById("win").innerHTML="The scouts have lost!!!";
-  document.getElementById("win").style.display="block";
-  lose.play();
-}
-console.log(a3);
+
+
+function y() {
+  var deciding = 12
+var arr = [ erwin + flock + marlow];
+  var scoutsWin = new Audio("sound/scouts-win.mp3")
+  var lose = new Audio("sound/gameover.mp3");
+
+  if (arr <= 12 ) {
+
+    document.getElementById("test").innerHTML = "The scouts have won!!!";
+    img2.style.left = `${img2.offsetLeft + 650}px`;
+    flo1.style.left = `${flo1.offsetLeft + 650}px`;
+    img.style.left = `${img.offsetLeft + 650}px`;
+    document.getElementById("final").style.display = "none";
+    document.getElementById("beast").src = "images/win1.png";
+    document.getElementById("test").style.display = "block";
+    scoutsWin.play();
+  } else {
+    lose.play();
+    document.getElementById("test").innerHTML = "The scouts have lost!!!";
+    document.getElementById("final").style.display = "none";
+    document.getElementById("beast").src = "images/beast2.png";
+    document.getElementById("f-pic").style.display = "none";
+    document.getElementById("m-pic").style.display = "none";
+    document.getElementById("e-pic").style.display = "none";
+    document.getElementById("test").style.display = "block";
+  }
+  console.log(deciding);
 };
-
 
 
 
@@ -162,13 +189,18 @@ function sound(){
 
 function play() {
 
-setTimeout(function(){
-document.getElementById("erwin-js").style.display="block";
+  setTimeout(function() {
+    document.getElementById("erwin-js").style.display = "block";
 
-},4000);
-//document.getElementById("erwin-js").style.display="block";
-document.getElementById("erwin-js").innerHTML = "ATTACK";
+  }, 4000);
+  //document.getElementById("erwin-js").style.display="block";
+  document.getElementById("erwin-js").innerHTML = "ATTACK";
 
-document.getElementById("playsound").style.display = "none";
+  document.getElementById("playsound").style.display = "none";
 
 };
+
+
+console.log(erwin + " erwin");
+console.log(flock + " flock");
+console.log(marlow + " marlow");
